@@ -1,0 +1,25 @@
+syntax="proto3";
+
+package auth;
+
+import "proto/userNewByMail.proto";
+import "proto/lang.proto";
+import "proto/get.proto";
+import "proto/info.proto";
+import "proto/signUpMail.proto";
+import "proto/exit.proto";
+import "proto/rm.proto";
+
+message Empty {}
+
+message Call {
+  oneof req {
+    UserNewByMailReq user_new_by_mail=1;
+    Empty lang=2;
+    Empty get=3;
+    InfoReq info=4;
+    SignUpMailReq sign_up_mail=5;
+    ExitReq exit=6;
+    RmReq rm=7;
+  }
+}

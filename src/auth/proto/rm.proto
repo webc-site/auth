@@ -1,0 +1,9 @@
+syntax="proto3";
+
+package auth;
+
+message RmReq {
+  uint64 uid=1;
+}
+
+message Rm {}
